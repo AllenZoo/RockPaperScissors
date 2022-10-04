@@ -1,0 +1,19 @@
+.body-display {
+  margin-top: 50px;
+}
+
+.rules-button {
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+
+  width: 100px;
+  height: 30px;
+
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  border: 2px solid hsl(229, 25%, 31%);
+  border-radius: 5px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
