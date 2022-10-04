@@ -1,0 +1,14 @@
+.score-display-container {
+  position: relative;
+  display: flex;
+  background: rgba(0, 0, 0, 0);
+  border: 3px solid hsl(217, 16%, 45%);
+  border-width: 5px;
+  width: 300px;
+  justify-content: space-between;
+}
+
+.score-counter-background {
+  background-color: white;
+  opacity: 1;
+}
