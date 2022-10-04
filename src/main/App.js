@@ -6,7 +6,7 @@ import ScoreDisplay from "../score/scoreDisplay";
 export const AppContext = createContext(null);
 function App() {
   const [mode, setMode] = useState("start");
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(12);
 
   return (
     <AppContext.Provider value={{ mode, setMode, score, setScore }}>
