@@ -1,3 +1,31 @@
+.selector-container {
+  background-image: url("../images/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: 80px;
+  background-size: 200px;
+
+  width: 350px;
+
+  display: flex;
+  flex-direction: column;
+
+  row-gap: 20px;
+  justify-content: center;
+}
+
+.top-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.bottom-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .icon-button {
   background: rgba(0, 0, 0, 0);
   border: none;

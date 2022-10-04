@@ -8,18 +8,21 @@ import "../../styles/selector.css";
 
 function WeaponSelector() {
   return (
-    <div>
-      <img src={triangleBg} alt="triangle-bg"></img>
-      <button className="icon-button">
-        <WeaponIcon iconIMG={rockImg} iconType="rock"></WeaponIcon>
-      </button>
+    <div className="selector-container">
+      <div className="top-row">
+        <button className="icon-button">
+          <WeaponIcon iconIMG={paperImg} iconType="paper"></WeaponIcon>
+        </button>
+        <button className="icon-button">
+          <WeaponIcon iconIMG={scissorImg} iconType="scissors"></WeaponIcon>
+        </button>
+      </div>
 
-      <button className="icon-button">
-        <WeaponIcon iconIMG={paperImg} iconType="paper"></WeaponIcon>
-      </button>
-      <button className="icon-button">
-        <WeaponIcon iconIMG={scissorImg} iconType="scissors"></WeaponIcon>
-      </button>
+      <div className="bottom-row">
+        <button className="icon-button">
+          <WeaponIcon iconIMG={rockImg} iconType="rock"></WeaponIcon>
+        </button>
+      </div>
     </div>
   );
 }
