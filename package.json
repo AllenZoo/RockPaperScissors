@@ -2,7 +2,7 @@
   "name": "rps_app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://AllenZoo.github.io",
+  "homepage": "https://AllenZoo.github.io/RockPaperScissors",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
