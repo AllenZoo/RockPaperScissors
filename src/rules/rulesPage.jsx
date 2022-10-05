@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ruleIMG from "../../images/image-rules.svg";
-import "../../styles/rule-page.css";
+import ruleIMG from "../images/image-rules.svg";
+import "../styles/rule-page.css";
 
 function RulesPage(props) {
   return (

@@ -1,10 +1,12 @@
 import React, { useContext, useState } from "react";
 import WeaponSelector from "./game/WeaponSelector";
 import ".././styles/body.css";
-import RulesPage from "../rules/ruleDisplay.jsx/rulesPage";
+import RulesPage from "../rules/rulesPage";
+import BattleDisplay from "./game/battleDisplay";
+import { AppContext } from "./App";
 
 function BodyDisplay() {
-  //const { mode } = useContext(AppContext);
+  const { mode } = useContext(AppContext);
   const [showModal, toggleModal] = useState(false);
 
   const toggleDisplay = () => {
@@ -14,11 +16,21 @@ function BodyDisplay() {
   return (
     <div>
       <div className="body-display">
-        <WeaponSelector />
+        {/* */}
+        <div style={{ display: mode == "select-phase" ? "block" : "none" }}>
+          <WeaponSelector />
+        </div>
+
+        <div style={{ display: mode == "battle-phase" ? "block" : "none" }}>
+          <BattleDisplay selector="YOU" />
+          <BattleDisplay />
+        </div>
       </div>
+
       <div style={{ display: showModal ? "block" : "none" }}>
         <RulesPage toggleDisplay={toggleDisplay} />
       </div>
+
       <div>
         <button onClick={toggleDisplay} className="rules-button">
           RULES

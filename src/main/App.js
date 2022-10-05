@@ -6,22 +6,17 @@ import BodyDisplay from "./bodyDisplay";
 
 export const AppContext = createContext(null);
 function App() {
-  const [mode, setMode] = useState("start");
+  const [mode, setMode] = useState("select-phase");
   const [score, setScore] = useState(12);
+  const [playerChoice, setPlayerChoice] = useState("none");
 
   return (
-    <AppContext.Provider value={{ mode, setMode, score, setScore }}>
+    <AppContext.Provider
+      value={{ mode, setMode, score, setScore, playerChoice, setPlayerChoice }}
+    >
       <ScoreDisplay />
       <BodyDisplay />
     </AppContext.Provider>
-
-    // <div className="App">
-    //   {mode === "start" && <>Start Menu</>}
-    //   {mode === "rules" && <>Start Menu</>}
-    //   {mode === "player picked" && <>Start Menu</>}
-    //   {mode === "computer picked" && <>Start Menu</>}
-    //   {mode === "result"}
-    // </div>
   );
 }
 

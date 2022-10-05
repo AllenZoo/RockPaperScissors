@@ -1,27 +1,61 @@
-import React, { useState } from "react";
-import rockImg from "../../images/icon-rock.svg";
-import paperImg from "../../images/icon-paper.svg";
-import scissorImg from "../../images/icon-scissors.svg";
-import triangleBg from "../../images/bg-triangle.svg";
 import WeaponIcon from "./components/weaponIcon";
 import "../../styles/selector.css";
+import React, { useContext, useEffect, useState } from "react";
+import { AppContext } from "../App";
 
 function WeaponSelector() {
-  return (
-    <div className="selector-container">
-      <div className="top-row">
-        <button className="icon-button">
-          <WeaponIcon iconIMG={paperImg} iconType="paper"></WeaponIcon>
-        </button>
-        <button className="icon-button">
-          <WeaponIcon iconIMG={scissorImg} iconType="scissors"></WeaponIcon>
-        </button>
-      </div>
+  const { setPlayerChoice, setMode } = useContext(AppContext);
+  const [run, setRun] = useState(true);
+  let selectedWeapon = "none";
+  let state = "select-phase";
 
-      <div className="bottom-row">
-        <button className="icon-button">
-          <WeaponIcon iconIMG={rockImg} iconType="rock"></WeaponIcon>
-        </button>
+  const selectWeapon = (weapon) => {
+    selectedWeapon = weapon;
+
+    state = "battle-phase";
+    //setMode(state);
+
+    setPlayerChoice(selectedWeapon);
+  };
+
+  // useEffect(() => {
+  //   setPlayerChoice(selectedWeapon);
+  //   setMode(state);
+  //   console.log("Set mode to " + state);
+  // }, []);
+
+  return (
+    <div>
+      <div className="selector-container">
+        <div className="top-row">
+          <button
+            className="icon-button"
+            onClick={function () {
+              selectWeapon("paper");
+            }}
+          >
+            <WeaponIcon iconType="paper"></WeaponIcon>
+          </button>
+          <button
+            className="icon-button"
+            onClick={function () {
+              selectWeapon("scissors");
+            }}
+          >
+            <WeaponIcon iconType="scissors"></WeaponIcon>
+          </button>
+        </div>
+
+        <div className="bottom-row">
+          <button
+            className="icon-button"
+            onClick={function () {
+              selectWeapon("rock");
+            }}
+          >
+            <WeaponIcon iconType="rock"></WeaponIcon>
+          </button>
+        </div>
       </div>
     </div>
   );
