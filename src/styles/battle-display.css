@@ -1,3 +1,5 @@
 .battle-display-container {
   display: flex;
+  flex-direction: row;
+  column-gap: 50px;
 }

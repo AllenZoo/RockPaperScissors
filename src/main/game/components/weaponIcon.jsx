@@ -33,7 +33,11 @@ function WeaponIcon(props) {
       </div>
     );
   } else {
-    return <div className="empty-icon-circle"></div>;
+    return (
+      <div className="empty-outer-circle">
+        <div className="empty-icon-circle"></div>;
+      </div>
+    );
   }
 }
 
