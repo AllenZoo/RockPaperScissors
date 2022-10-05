@@ -5,18 +5,22 @@ import RulesPage from "../rules/ruleDisplay.jsx/rulesPage";
 
 function BodyDisplay() {
   //const { mode } = useContext(AppContext);
+  const [showModal, toggleModal] = useState(false);
 
-  const displayRules = () => {};
+  const toggleDisplay = () => {
+    toggleModal(!showModal);
+  };
+
   return (
     <div>
       <div className="body-display">
         <WeaponSelector />
       </div>
-      <div>
-        <RulesPage />
+      <div style={{ display: showModal ? "block" : "none" }}>
+        <RulesPage toggleDisplay={toggleDisplay} />
       </div>
       <div>
-        <button onClick={displayRules} className="rules-button">
+        <button onClick={toggleDisplay} className="rules-button">
           RULES
         </button>
       </div>

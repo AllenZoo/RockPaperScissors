@@ -1,4 +1,57 @@
 .rule-page-container {
   background-color: white;
-  position: absolute;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+
+  padding: 20px;
+  border-radius: 10px;
+
+  z-index: 600;
+}
+
+.rule-page-image {
+  width: 250px;
+}
+.rule-page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rule-page-header div {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.rule-page-header button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 20px;
+
+  color: hsl(229, 25%, 31%);
+}
+
+.rule-page-header button:hover {
+  cursor: pointer;
+}
+
+.dimmer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 500;
 }
