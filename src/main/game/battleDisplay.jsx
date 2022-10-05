@@ -19,19 +19,20 @@ function BattleDisplay(props) {
     let min = 0;
     let max = 2;
     let num = Math.round(Math.random() * (max - min) + min);
+    console.log("Computer chooses #" + num);
 
     let wait = await resolveAfter2Seconds();
 
     switch (num) {
       case 0:
         setComputerChoice("rock");
-      //return "rock";
+        break;
       case 1:
         setComputerChoice("paper");
-      //return "paper";
+        break;
       case 2:
         setComputerChoice("scissors");
-      //return "scissors";
+        break;
     }
 
     wait = await resolveAfter1Second();
