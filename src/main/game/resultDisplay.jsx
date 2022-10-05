@@ -16,34 +16,40 @@ function ResultDisplay() {
   const [result, setResult] = useState("none");
 
   const getResult = () => {
-    console.log("Get result");
+    // console.log("Get result");
 
     if (playerChoice === computerChoice) {
       setResult("DRAW");
-      return result;
+      return;
     }
 
     if (playerChoice === "rock") {
       if (computerChoice === "scissors") {
         setResult("YOU WIN");
+        setScore(score + 1);
       } else if (computerChoice === "paper") {
         setResult("YOU LOSE");
+        setScore(score - 1);
       }
     } else if (playerChoice === "paper") {
       if (computerChoice === "rock") {
         setResult("YOU WIN");
+        setScore(score + 1);
       } else if (computerChoice === "scissors") {
         setResult("YOU LOSE");
+        setScore(score - 1);
       }
     } else if (playerChoice === "scissors") {
       if (computerChoice === "paper") {
         setResult("YOU WIN");
+        setScore(score + 1);
       } else if (computerChoice === "rock") {
         setResult("YOU LOSE");
+        setScore(score - 1);
       }
     }
 
-    return result;
+    return;
   };
 
   const resetState = () => {
@@ -60,7 +66,6 @@ function ResultDisplay() {
       result === "none"
     ) {
       getResult();
-      console.log(result);
     }
   });
 
@@ -70,7 +75,16 @@ function ResultDisplay() {
 
   return (
     <div className="result-display-container">
-      <SelectionDisplay icon={playerChoice} selector="YOU" />
+      <div /*style={{ display: result === "YOU WIN" ? "block" : "none" }}*/>
+        <div className="outer-ring">
+          <div className="middle-ring">
+            <div className="inner-ring">
+              <SelectionDisplay icon={playerChoice} selector="YOU" />
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="result-display">
         <div>{result}</div>
         <button
@@ -81,7 +95,7 @@ function ResultDisplay() {
           PLAY AGAIN
         </button>
       </div>
-      <div>
+      <div /*style={{ display: result === "YOU LOSE" ? "block" : "none" }}*/>
         <SelectionDisplay icon={computerChoice} selector="THE HOUSE" />
       </div>
     </div>

@@ -21,7 +21,7 @@ function BattleDisplay(props) {
     let num = Math.round(Math.random() * (max - min) + min);
     console.log("Computer chooses #" + num);
 
-    let wait = await resolveAfter2Seconds();
+    let wait = await resolveAfter1Second();
 
     switch (num) {
       case 0:

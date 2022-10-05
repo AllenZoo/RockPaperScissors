@@ -7,7 +7,7 @@ import BodyDisplay from "./bodyDisplay";
 export const AppContext = createContext(null);
 function App() {
   const [mode, setMode] = useState("select-phase");
-  const [score, setScore] = useState(12);
+  const [score, setScore] = useState(0);
   const [playerChoice, setPlayerChoice] = useState("none");
   const [computerChoice, setComputerChoice] = useState("none");
 

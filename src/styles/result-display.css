@@ -14,10 +14,28 @@
 
 .result-display div {
   color: white;
-  font-size: 15px;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .result-display button {
-  padding: 5px 15px 5px 15px;
+  padding: 10px 25px 10px 25px;
   letter-spacing: 1px;
+  border-radius: 5px;
+  border: none;
+
+  color: hsl(229, 25%, 31%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: color 0.15s;
+}
+
+.result-display button:hover {
+  cursor: pointer;
+  color: hsl(349, 71%, 52%);
+}
+
+.outer-ring {
 }
