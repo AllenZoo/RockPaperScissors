@@ -28,6 +28,10 @@ Users should be able to:
 
 ### Screenshot
 
+#### Rules Modal
+![](https://github.com/AllenZoo/RockPaperScissors/blob/master/screenshots/RPS_rule_modal.JPG)
+
+
 #### Select Phase
 
 ![](https://github.com/AllenZoo/RockPaperScissors/blob/master/screenshots/RPS_select_phase.JPG)
