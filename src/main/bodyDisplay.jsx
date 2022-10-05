@@ -22,7 +22,6 @@ function BodyDisplay() {
         </div>
 
         <div style={{ display: mode == "battle-phase" ? "block" : "none" }}>
-          <BattleDisplay selector="YOU" />
           <BattleDisplay />
         </div>
       </div>

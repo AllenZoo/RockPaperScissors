@@ -18,19 +18,23 @@ function WeaponIcon(props) {
     }
   };
 
-  return (
-    <div>
-      <div className={style}>
-        <div className="inner-circle">
-          <img
-            className="icon-image"
-            src={getImage(iconType)}
-            alt="icon image"
-          ></img>
+  if (iconType != "none") {
+    return (
+      <div>
+        <div className={style}>
+          <div className="inner-circle">
+            <img
+              className="icon-image"
+              src={getImage(iconType)}
+              alt="icon image"
+            ></img>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return <div className="empty-icon-circle"></div>;
+  }
 }
 
 export default WeaponIcon;

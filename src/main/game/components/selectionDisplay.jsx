@@ -10,6 +10,8 @@ function SelectionDisplay(props) {
   const selector = props.selector;
   const selectorText = selector + " PICKED";
 
+  console.log(icon);
+
   return (
     <div className="selection-display-container">
       <div className="selection-display-text">{selectorText}</div>

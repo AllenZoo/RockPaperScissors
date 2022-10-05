@@ -11,10 +11,9 @@ function WeaponSelector() {
 
   const selectWeapon = (weapon) => {
     selectedWeapon = weapon;
-
     state = "battle-phase";
-    //setMode(state);
 
+    setMode(state);
     setPlayerChoice(selectedWeapon);
   };
 

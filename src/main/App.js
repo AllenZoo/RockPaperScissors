@@ -9,10 +9,20 @@ function App() {
   const [mode, setMode] = useState("select-phase");
   const [score, setScore] = useState(12);
   const [playerChoice, setPlayerChoice] = useState("none");
+  const [computerChoice, setComputerChoice] = useState("none");
 
   return (
     <AppContext.Provider
-      value={{ mode, setMode, score, setScore, playerChoice, setPlayerChoice }}
+      value={{
+        mode,
+        setMode,
+        score,
+        setScore,
+        playerChoice,
+        setPlayerChoice,
+        computerChoice,
+        setComputerChoice,
+      }}
     >
       <ScoreDisplay />
       <BodyDisplay />
