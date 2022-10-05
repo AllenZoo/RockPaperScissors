@@ -4,6 +4,7 @@ import ".././styles/body.css";
 import RulesPage from "../rules/rulesPage";
 import BattleDisplay from "./game/battleDisplay";
 import { AppContext } from "./App";
+import ResultDisplay from "./game/resultDisplay";
 
 function BodyDisplay() {
   const { mode } = useContext(AppContext);
@@ -23,6 +24,10 @@ function BodyDisplay() {
 
         <div style={{ display: mode == "battle-phase" ? "block" : "none" }}>
           <BattleDisplay />
+        </div>
+
+        <div style={{ display: mode == "result-phase" ? "block" : "none" }}>
+          <ResultDisplay />
         </div>
       </div>
 

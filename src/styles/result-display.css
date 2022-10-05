@@ -1,0 +1,22 @@
+.result-display-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.result-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-display div {
+  color: white;
+  font-size: 15px;
+}
+
+.result-display button {
+  padding: 5px 15px 5px 15px;
+}

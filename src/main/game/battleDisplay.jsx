@@ -20,22 +20,23 @@ function BattleDisplay(props) {
     let max = 2;
     let num = Math.round(Math.random() * (max - min) + min);
 
-    const wait = await resolveAfter2Seconds();
+    let wait = await resolveAfter2Seconds();
 
     switch (num) {
       case 0:
         setComputerChoice("rock");
-        return "rock";
+      //return "rock";
       case 1:
         setComputerChoice("paper");
-        return "paper";
+      //return "paper";
       case 2:
         setComputerChoice("scissors");
-        return "scissors";
+      //return "scissors";
     }
 
     wait = await resolveAfter1Second();
-    setMode("result-phase");
+    let state = "result-phase";
+    setMode(state);
   }
 
   function resolveAfter2Seconds() {
