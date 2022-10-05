@@ -28,7 +28,17 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+#### Select Phase
+
+![](https://github.com/AllenZoo/RockPaperScissors/blob/master/screenshots/RPS_select_phase.JPG)
+
+#### Battle Phase
+
+![](https://github.com/AllenZoo/RockPaperScissors/blob/master/screenshots/RPS_battle_phase.JPG)
+
+#### Result Phase
+
+![](https://github.com/AllenZoo/RockPaperScissors/blob/master/screenshots/RPS_result_phase.JPG)
 
 ### Links
 
