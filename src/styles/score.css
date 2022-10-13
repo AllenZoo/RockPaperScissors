@@ -2,6 +2,8 @@
 
 .score-display-container {
   position: relative;
+  z-index: 100;
+
   display: flex;
   background: rgba(0, 0, 0, 0);
   border: 3px solid hsl(217, 16%, 45%);

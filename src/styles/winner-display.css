@@ -1,4 +1,5 @@
 .winner-display-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7,7 +8,56 @@
   row-gap: 30px;
 }
 
+.winner-icon div {
+  position: relative;
+  z-index: 300;
+}
+
 .winner-display-text {
+  position: relative;
   color: white;
   font-weight: 600;
+  z-index: 300;
+}
+
+.wd-outer-circle {
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  border-radius: 250px;
+  top: -100px;
+
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.wd-middle-circle {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 250px;
+  top: 0px;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.wd-inner-circle {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border-radius: 250px;
+  top: 0px;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
 }

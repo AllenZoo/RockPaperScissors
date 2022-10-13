@@ -12,12 +12,10 @@ function WinnerDisplay(props) {
   return (
     <div className="winner-display-container">
       <div className="winner-display-text">{selectorText}</div>
-
-      <div className="outer-circle">
-        <div className="middle-circle">
-          <div className="inner-circle">
-            <WeaponIcon iconType={icon} />
-          </div>
+      <WeaponIcon className="winner-icon" iconType={icon} />
+      <div className="wd-outer-circle">
+        <div className="wd-middle-circle">
+          <div className="wd-inner-circle"></div>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../App";
 import SelectionDisplay from "./components/selectionDisplay";
+import WinnerDisplay from "./components/winnerDisplay";
 import "../../styles/result-display.css";
 
 function ResultDisplay() {
@@ -67,16 +68,18 @@ function ResultDisplay() {
     ) {
       getResult();
     }
-  });
-
-  // useEffect(() => {
-  //   getResult();
-  // }, []);
+  }, [playerChoice, computerChoice, result]);
 
   return (
     <div className="result-display-container">
-      <div>
+      <div style={{ display: result === "YOU LOSE" ? "block" : "none" }}>
         <SelectionDisplay icon={playerChoice} selector="YOU" />
+      </div>
+      <div style={{ display: result === "DRAW" ? "block" : "none" }}>
+        <SelectionDisplay icon={playerChoice} selector="YOU" />
+      </div>
+      <div style={{ display: result === "YOU WIN" ? "block" : "none" }}>
+        <WinnerDisplay icon={playerChoice} selector="YOU" />
       </div>
 
       <div className="result-display">
@@ -89,8 +92,14 @@ function ResultDisplay() {
           PLAY AGAIN
         </button>
       </div>
-      <div /*style={{ display: result === "YOU LOSE" ? "block" : "none" }}*/>
+      <div style={{ display: result === "YOU WIN" ? "block" : "none" }}>
         <SelectionDisplay icon={computerChoice} selector="THE HOUSE" />
+      </div>
+      <div style={{ display: result === "DRAW" ? "block" : "none" }}>
+        <SelectionDisplay icon={computerChoice} selector="THE HOUSE" />
+      </div>
+      <div style={{ display: result === "YOU LOSE" ? "block" : "none" }}>
+        <WinnerDisplay icon={computerChoice} selector="THE HOUSE" />
       </div>
     </div>
   );
