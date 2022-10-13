@@ -8,7 +8,10 @@ function ResultDisplay() {
 
   return (
     <div className="result-display-container">
-      <SelectionDisplay icon={playerChoice} selector="YOU" />
+      <div>
+        <SelectionDisplay icon={playerChoice} selector="YOU" />
+      </div>
+
       <div className="result-display">
         <div>Result</div>
         <button>Play Again</button>

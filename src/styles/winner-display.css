@@ -1,0 +1,13 @@
+.winner-display-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  row-gap: 30px;
+}
+
+.winner-display-text {
+  color: white;
+  font-weight: 600;
+}
