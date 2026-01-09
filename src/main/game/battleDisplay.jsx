@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { AppContext } from "../App";
 import SelectionDisplay from "./components/selectionDisplay";
 import "../../styles/battle-display.css";
+import { AI_NAME } from "@/constants";
 
 function BattleDisplay(props) {
   const selector = props.selector;
@@ -59,7 +60,7 @@ function BattleDisplay(props) {
   return (
     <div className="battle-display-container">
       <SelectionDisplay icon={playerChoice} selector="YOU" />
-      <SelectionDisplay icon={computerChoice} selector="THE HOUSE" />
+      <SelectionDisplay icon={computerChoice} selector={AI_NAME} />
     </div>
   );
 }

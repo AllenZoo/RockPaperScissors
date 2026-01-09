@@ -5,7 +5,7 @@ function WinnerDisplay(props) {
   // Either 'none', 'rock', 'paper', or 'scissors'
   const icon = props.icon;
 
-  // Either 'YOU' or 'THE HOUSE'
+  // Either 'YOU' or 'RPS GOD'
   const selector = props.selector;
   const selectorText = selector + " PICKED";
 

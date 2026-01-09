@@ -3,6 +3,7 @@ import { AppContext } from "../App";
 import SelectionDisplay from "./components/selectionDisplay";
 import WinnerDisplay from "./components/winnerDisplay";
 import "../../styles/result-display.css";
+import { AI_NAME } from "@/constants";
 
 function ResultDisplay() {
   const {
@@ -93,13 +94,13 @@ function ResultDisplay() {
         </button>
       </div>
       <div style={{ display: result === "YOU WIN" ? "block" : "none" }}>
-        <SelectionDisplay icon={computerChoice} selector="THE HOUSE" />
+        <SelectionDisplay icon={computerChoice} selector={AI_NAME} />
       </div>
       <div style={{ display: result === "DRAW" ? "block" : "none" }}>
-        <SelectionDisplay icon={computerChoice} selector="THE HOUSE" />
+        <SelectionDisplay icon={computerChoice} selector={AI_NAME} />
       </div>
       <div style={{ display: result === "YOU LOSE" ? "block" : "none" }}>
-        <WinnerDisplay icon={computerChoice} selector="THE HOUSE" />
+        <WinnerDisplay icon={computerChoice} selector={AI_NAME} />
       </div>
     </div>
   );
