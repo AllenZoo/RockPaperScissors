@@ -1,15 +1,19 @@
 export function createRound({
-  userMove,
-  aiMove,
-  result,
-  previousRound = null,
+  round,
+  player_last_move,
+  ai_last_move,
+  question_id,
+  answer,
+  outcome,
+  actual_player_move,
 }) {
   return {
-    userMove,
-    aiMove,
-    result,
-    previousUserMove: previousRound?.userMove ?? null,
-    previousResult: previousRound?.result ?? null,
-    timestamp: Date.now(),
+    round,
+    player_last_move,
+    ai_last_move,
+    question_id,
+    answer,
+    outcome,
+    actual_player_move,
   };
 }
