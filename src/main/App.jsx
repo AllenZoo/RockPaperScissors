@@ -6,10 +6,16 @@ import BodyDisplay from "./bodyDisplay";
 
 export const AppContext = createContext(null);
 function App() {
-  const [mode, setMode] = useState("select-phase");
+  const [mode, setMode] = useState("question-phase");
   const [score, setScore] = useState(0);
   const [playerChoice, setPlayerChoice] = useState("none");
   const [computerChoice, setComputerChoice] = useState("none");
+  const [questionAnswer, setQuestionAnswer] = useState(null);
+  const [sessionData, setSessionData] = useState([]);
+  const [roundNumber, setRoundNumber] = useState(0);
+  const [lastPlayerMove, setLastPlayerMove] = useState(null);
+  const [lastAiMove, setLastAiMove] = useState(null);
+  const [lastOutcome, setLastOutcome] = useState(null);
 
   return (
     <AppContext.Provider
@@ -22,6 +28,18 @@ function App() {
         setPlayerChoice,
         computerChoice,
         setComputerChoice,
+        questionAnswer,
+        setQuestionAnswer,
+        sessionData,
+        setSessionData,
+        roundNumber,
+        setRoundNumber,
+        lastPlayerMove,
+        setLastPlayerMove,
+        lastAiMove,
+        setLastAiMove,
+        lastOutcome,
+        setLastOutcome,
       }}
     >
       <ScoreDisplay />

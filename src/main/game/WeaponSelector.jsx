@@ -4,17 +4,14 @@ import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../App";
 
 function WeaponSelector() {
-  const { setPlayerChoice, setMode } = useContext(AppContext);
+  const { setPlayerChoice, setMode, setQuestionAnswer } =
+    useContext(AppContext);
   const [run, setRun] = useState(true);
-  let selectedWeapon = "none";
   let state = "select-phase";
 
   const selectWeapon = (weapon) => {
-    selectedWeapon = weapon;
-    state = "battle-phase";
-
-    setMode(state);
-    setPlayerChoice(selectedWeapon);
+    setPlayerChoice(weapon); // Store weapon choice in context
+    setMode("battle-phase");
   };
 
   // useEffect(() => {
